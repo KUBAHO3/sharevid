@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import {   Text, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { Slot, SplashScreen, Stack } from 'expo-router'
 import { useFonts } from 'expo-font'
@@ -39,12 +39,3 @@ const RootLayout = () => {
 }
 
 export default RootLayout
-
-const styles = StyleSheet.create({
-    container: {
-        display: 'flex',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    }
-})
