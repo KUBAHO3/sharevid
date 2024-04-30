@@ -36,7 +36,11 @@ export default function App() {
                     Where creativity meets innovation: embark on a journey of limitlessexprolation with Aora
                 </Text>
 
-                
+                <CustomButton 
+                    title="Continue with Email"
+                    handlePress={()=> router.push('/sign-in')}
+                    containerStyles="w-full mt-7"
+                />
             </View>
         </ScrollView>
 
