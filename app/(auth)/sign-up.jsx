@@ -6,6 +6,7 @@ import { images } from '../../constants'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
 import { Link } from 'expo-router'
+import { createUser } from '../../lib/appwrite'
 
 const SignUp = () => {
   const [form, setForm] = useState({
@@ -16,7 +17,7 @@ const SignUp = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const submit = () => {
-    
+    createUser();
   }
   return (
     <SafeAreaView className='bg-primary h-full'>
@@ -59,7 +60,7 @@ const SignUp = () => {
           />
           <View className="justify-center pt-5 flex-row gap-2">
             <Text className="text-lg text-gray-100 font-pregular">Already have account?</Text>
-            <Link href="/sign-up" className="text-lg font-psemibold text-secondary">Sign In</Link>
+            <Link href="/sign-in" className="text-lg font-psemibold text-secondary">Sign In</Link>
           </View>
         </View>
       </ScrollView>
