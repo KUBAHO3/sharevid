@@ -24,11 +24,12 @@ const SignIn = () => {
     setIsSubmitting(true);
     try {
       const result = await signIn(form.email, form.password)
-      //set it to global state
+      setUser(result)
+      setIsLogged(true);
 
       router.replace('/home')
     } catch (error) {
-      Alert.alert('Error', error.message);
+      Alert.alert('Error here', error.message);
     } finally {
       setIsSubmitting(false);
     }
